@@ -24,15 +24,16 @@ syn keyword singularitySection contained apphelp applabels appinstall appenv app
 " Regions
 syn region singularityString start=/"/ skip=/\\"|\\\\/ end=/"/
 syn region singularityComment start="#" end="\n"
-syn region singularitySectionLine start="%" end="\s" contains=singularitySection
+syn region singularitySectionLine start="^%" end="\s" contains=singularitySection
+syn region singularityVariable start="%{" end="}"
 
 " Highlighting
-hi def link singularityVarAssign   Variable
-hi def link singularitySection     Special
-hi def link singularitySectionLine Special
-hi def link singularityKeyword     Statement
+hi def link singularityVariable    Identifier
+hi def link singularitySection     Function
+hi def link singularitySectionLine SpecialChar
+hi def link singularityKeyword     Keyword
 hi def link singularityComment     Comment
 hi def link singularityString      String
-hi def link shellCommand           Function
+hi def link shellCommand           Statement
 
 let b:current_syntax = "singularity"
