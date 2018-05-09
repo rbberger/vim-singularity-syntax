@@ -13,7 +13,7 @@ syn keyword shellCommand exec export apt apt-get yum dnf touch chmod usermod gro
 " TODO add more common shell commands
 
 syn case ignore
-syn keyword singularityKeyword Bootstrap From OSVersion MirrorURL Include
+syn keyword singularityKeyword Bootstrap From OSVersion MirrorURL Include UpdateURL Include
 syn case match
 
 syn keyword singularitySection contained help setup files labels environment post runscript test
